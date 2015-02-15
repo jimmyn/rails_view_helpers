@@ -1,8 +1,6 @@
 # RailsViewHelpers
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/rails_view_helpers`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Simple set of Rails View Helpers.
+This gem includes 'active_link_to' and 'phoner'
 
 ## Installation
 
@@ -21,14 +19,24 @@ Or install it yourself as:
     $ gem install rails_view_helpers
 
 ## Usage
+```
+ext_link_to 'twitter.com/granitweet'
+=> <a href="http://twitter.com/granitweet" target="_blank">twitter.com/granitweet</a>
 
-TODO: Write usage instructions here
+ext_link_to 'https://twitter.com/granitweet'
+=> <a href="https://twitter.com/granitweet" target="_blank">https://twitter.com/granitweet</a>
 
-## Development
+phone_link_to '9213467823'
+=> <a href="tel:+79213467823"><i>+7 (921)</i>346 7823</a>
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release` to create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+phone_link_to '1234567'
+=> <a href="tel:+78121234567"><i>+7 (812)</i>123 4567</a>
+```
+To change default codes use
+```
+Phoner::Phone.default_country_code = '7'
+Phoner::Phone.default_area_code = '812'
+```
 
 ## Contributing
 
