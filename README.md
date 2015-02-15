@@ -1,6 +1,6 @@
 # RailsViewHelpers
 Simple set of Rails View Helpers.
-This gem includes 'active_link_to' and 'phoner'
+This gem includes 'active_link_to' and 'phone' gems
 
 ## Installation
 
