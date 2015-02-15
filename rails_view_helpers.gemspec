@@ -25,7 +25,7 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.8"
   spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_dependency "active_link_to"
-  spec.add_dependency "phone"
+  spec.add_dependency "active_link_to", "~> 1.0.2"
+  spec.add_dependency "phone", "~> 1.2.3"
 
 end
