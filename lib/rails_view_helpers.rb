@@ -6,6 +6,3 @@ module RailsViewHelpers
   Phoner::Phone.default_area_code = '812'
 end
 
-ActiveSupport.on_load(:action_view) do
-  include RailsViewHelpers::Helpers
-end
