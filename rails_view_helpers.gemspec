@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.name          = "rails_view_helpers"
   spec.version       = RailsViewHelpers::VERSION
   spec.authors       = ["Dmitriy Nevzorov"]
-  spec.email         = ["jimmy.lugat@gmail.com"]
+  spec.email         = ["dmitriy@4isten.co"]
 
   if spec.respond_to?(:metadata)
     spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com' to prevent pushes to rubygems.org, or delete to allow pushes to any server."
