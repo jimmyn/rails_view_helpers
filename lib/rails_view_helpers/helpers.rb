@@ -11,12 +11,18 @@ module RailsViewHelpers
 
   def ext_link_to(name = nil, options = nil, html_options = nil, &block)
     html_options, options, name = options, name, block if block_given?
-    options ||= name
+    options ||= {}
     html_options = convert_options_to_data_attributes(options, html_options)
-    url = /^http/i.match(options) ? options : "http://#{options}"
+    if options.is_a? String
+      url = /^http/i.match(options) ? options : "http://#{options}"
+    else
+      url = /^http/i.match(name) ? name : "http://#{name}"
+    end
     html_options['href'] ||= url
     html_options['target'] ||= '_blank'
+
     content_tag(:a, name || url, html_options, &block)
+
   end
 end
 
